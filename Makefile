@@ -9,9 +9,9 @@ default: build
 
 build:
 	clear
-	@echo El GID del grupo \"docker\" en el Docker Hosts es: $(DOCKER_GID)
+	@echo The GID of the \"docker\" group on the Docker Hosts is: $(DOCKER_GID)
 	@echo
-	@echo "Presiona cualquier tecla para continuar"
+	@echo "Press any key to continue"
 	@read -n 1 -r
 	clear
 	docker build --build-arg DOCKER_GID=$(DOCKER_GID) -t $(USER)/$(IMAGE) .
